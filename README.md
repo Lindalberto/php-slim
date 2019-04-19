@@ -23,3 +23,15 @@ Run this command in the application directory to run the test suite
 	php composer.phar test
 
 That's it! Now go build something cool.
+
+###Estruturas criadas
+
+    Main
+        * Project - Remove o que estava na index e agrupa numa classe unica, tirando necessidade do arquivo settings, dependencies e routes.
+            No run é possível adicionar tambem middlewares.
+        * Rest - Classe abtrata para ser utilizada no controle dos endpoints, com o app injetado.
+        * Routes - Utiliza essa classe de forma injetável para informar as rotas. Cada endpoint rest pode ter seu proprio.  
+    Rest
+        ** alocação das classes de controle    
+    Service
+        ** alocação das classes de serviço
