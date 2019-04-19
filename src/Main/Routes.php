@@ -11,6 +11,7 @@ namespace Src\Main;
 
 use Slim\Http\Request;
 use Slim\Http\Response;
+use Src\Rest\Example\Route as Example;
 
 class Routes
 {
@@ -24,5 +25,8 @@ class Routes
             // Render index view
             return $this->renderer->render($response, 'index.phtml', $args);
         });
+
+        $example = new Example();
+        $example($app);
     }
 }
